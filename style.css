@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+.ekran { display: none; max-width: 600px; margin: 0 auto; }
+.ekran.aktywny { display: block; }
+.logo { max-width: 200px; margin-bottom: 20px; }
+h1 { font-size: 24px; font-weight: bold; }
+h2 { font-size: 14px; font-weight: normal; margin-bottom: 40px; }
+button {
+    background-color: #0056b3; color: white; border: none;
+    padding: 15px 30px; font-size: 16px; border-radius: 5px;
+    cursor: pointer; width: 100%; margin-top: 10px;
+}
+button:disabled { background-color: #ccc; cursor: not-allowed; }
+.opcja {
+    background: white; border: 2px solid #ddd; padding: 15px;
+    margin: 10px 0; border-radius: 5px; cursor: pointer; text-align: left;
+}
+.opcja.zaznaczona { border-color: #0056b3; background-color: #e6f0fa; }
+.zdany { color: green; }
+.niezaliczony { color: red; }
+.przeglad-pytanie {
+    background: white; padding: 15px; margin-bottom: 15px;
+    border-radius: 5px; text-align: left; border-left: 5px solid #ccc;
+}
+.dobrze { border-left-color: green; }
+.zle { border-left-color: red; }
+.checkbox-container { margin-top: 10px; font-size: 14px; color: #555; }
