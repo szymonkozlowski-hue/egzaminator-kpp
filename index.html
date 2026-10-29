@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egzaminator KPP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <!-- EKRAN STARTOWY -->
+    <div id="ekran-startowy" class="ekran aktywny">
+        <img src="pgrm_logo_1.png" alt="Logo" class="logo">
+        <h1>EGZAMINATOR KPP</h1>
+        <h2>APLIKACJA PRZYGOTOWUJĄCA DO EGZAMINU<br>Z ZAKRESU KWALIFIKOWANEJ PIERWSZEJ POMOCY</h2>
+        <button id="btn-start">ROZPOCZNIJ EGZAMIN</button>
+    </div>
+
+    <!-- EKRAN EGZAMINU -->
+    <div id="ekran-egzaminu" class="ekran">
+        <div id="licznik-czasu">30:00</div>
+        <div id="licznik-pytan">Pytanie 1/30</div>
+        <div id="tresc-pytania"></div>
+        <div id="opcje-odpowiedzi"></div>
+        <button id="btn-nastepne" disabled>NASTĘPNE PYTANIE</button>
+    </div>
+
+    <!-- EKRAN WYNIKÓW -->
+    <div id="ekran-wynikow" class="ekran">
+        <h1 id="wynik-naglowek"></h1>
+        <p id="wynik-punkty"></p>
+        <button id="btn-przeglad">PRZEGLĄDAJ ODPOWIEDZI</button>
+        <button id="btn-powrot">WRÓĆ DO MENU</button>
+    </div>
+
+    <!-- EKRAN PRZEGLĄDU -->
+    <div id="ekran-przegladu" class="ekran">
+        <h2>Twoje odpowiedzi</h2>
+        <div id="lista-przegladu"></div>
+        <button id="btn-zakoncz-przeglad">ZAKOŃCZ</button>
+    </div>
+
+    <script src="pytania.js"></script>
+    <script src="app.js"></script>
+    <script>
+        // Rejestracja Service Workera dla instalacji PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html>
